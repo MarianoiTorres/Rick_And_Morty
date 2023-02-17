@@ -1,0 +1,60 @@
+
+.input {
+    text-align: center;
+    background-color:rgb(114, 224, 128);
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border-radius: 10px;
+    width: 10em;
+    height: 2.3em;
+    font-size: "Courier New",monospace;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+    margin-bottom: 0;
+}
+
+.input:hover{
+    border: 2px solid rgb(14, 197, 136);
+    color: rgb(14, 197, 136);
+    background-color: #17181c;
+    
+}
+
+.button {    
+    color: white;
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+    margin-left: 5px;
+    width: 6.5em;
+    height: 2.3em;
+    font-weight:bolder;
+    background-color: rgb(14, 197, 136);
+    font-family: "Courier New",monospace;
+    border-radius: 10px;
+    border-color: rgb(64, 138, 113);
+}
+
+.button:hover{
+    border: 2px solid rgb(14, 197, 136);
+    color: rgb(14, 197, 136);
+    background-color: #17181c;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.input::placeholder{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 576px) {
+
+    .button {
+        width: 4.5em;
+        height: 2.3em;
+    }
+}

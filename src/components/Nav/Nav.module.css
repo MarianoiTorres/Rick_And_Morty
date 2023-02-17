@@ -1,0 +1,82 @@
+.navbar {
+    padding: 1em;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    );
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    margin: 0;
+    padding: 0;
+    padding-right: 23px;
+    display: flex;
+    justify-content: right;
+}
+
+.botones { 
+    color: white;
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+    margin-left: 5px;
+    width: 6.5em;
+    height: 2.3em;
+    font-weight:bolder;
+    background-color: rgb(14, 197, 136);
+    font-family: "Courier New",monospace;
+    border-radius: 10px;
+    border-color: rgb(64, 138, 113); 
+}
+
+.botones:hover {
+    border: 2px solid rgb(14, 197, 136);
+    color: rgb(14, 197, 136);
+    background-color: #17181c;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.imagen {
+    width: 200px;
+    animation: animacion infinite linear 1900ms
+}
+
+
+@keyframes animacion {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logout {
+    width: 22px;
+}
+
+@media (max-width: 576px) {
+
+    .navbar {
+        margin: 0;
+        width: 100%;
+        justify-content:center;
+    }
+
+    .imagen{
+        display: none;
+    }
+
+    .botones {
+        width: 4.5em;
+        height: 2.3em;
+    }
+}

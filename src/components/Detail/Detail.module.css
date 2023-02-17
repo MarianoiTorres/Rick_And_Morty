@@ -1,0 +1,71 @@
+.contenedor {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.posicion {
+    width: fit-content;
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 4em;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 1px solid rgba(255,255,255,0.1);
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    border-radius: 20px;
+}
+
+.posicion:hover {
+    transform: scale(1.01);
+   
+    -webkit-box-shadow: 0px 0px 21px 0px rgb(14, 197, 136);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
+    box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
+     transition: 0.1s ease-in;
+}
+
+
+.img {
+    border-radius: 200px;
+    box-shadow: 0px 0px 21px 0px rgb(255, 255, 255);
+}
+
+h2 {
+
+    font-family: "Courier New",monospace;
+    color: white;
+}
+
+b {
+    color: rgb(74, 185, 40);;
+}
+
+.info{
+    width: 25em;
+    height: 19em;
+    text-align: left;
+}
+
+@media (max-width: 576px){
+    .posicion {
+        padding: 30px;
+        flex-direction:column;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+
+
+}

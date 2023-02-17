@@ -1,0 +1,160 @@
+
+.contenedor { 
+    margin: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content:center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 13em;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 1px solid rgba(255,255,255,0.1);
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    border-radius: 24px;
+    padding: 10px;
+    
+}
+
+.cards:hover{
+    transform: scale(1.05);
+   
+    -webkit-box-shadow: 0px 0px 21px 0px rgb(14, 197, 136);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
+    box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
+     transition: 0.1s ease-in;
+}
+
+.image {
+    border-radius: 1em;
+    width: 13em;
+    height: 13em;
+}
+
+.font {
+    font-family: "Courier New",monospace;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+    font-size: 0.8em;
+}
+
+.name {
+    height: 3.5em;
+    width: 8.7em;
+    text-align: center;
+    font-family: "Courier New",monospace;
+    color: rgb(14, 197, 136);
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+}
+
+.botones {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.button {
+    color: white;
+    text-shadow: 0.1em 0.1em 0.3em #000000;
+    display: none;
+    font-weight:bolder;
+    width:65px;
+    height: 20px;
+    background-color: rgb(114, 224, 128);
+    font-family: "Courier New",monospace;
+    border-radius: 10px;
+    border-color: rgb(64, 138, 113);
+    
+}
+
+.button:hover{
+    border: 2px solid rgb(14, 197, 136);
+    color: rgb(14, 197, 136);
+    background-color: #17181c;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+
+.cards:hover .button {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonFavorite {
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+
+}
+
+.buttonFavorite:hover {
+    transform: scale(1.3);
+}
+
+.cards:hover .buttonFavorite{
+    animation: animacion infinite linear 1300ms;    
+    display: block;
+}
+
+@keyframes animacion {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor {  
+        padding-top: 100px;
+        margin: 20px;
+        padding-bottom: 15px;
+        gap: 1em;
+    }
+
+    .cards {
+        width: 10em;
+        height: 300px;
+    }
+
+    .image {
+        border-radius: 1em;
+        width: 8em;
+        height: 8em;
+    }
+
+    .font {
+        font-family: "Courier New",monospace;
+        color: white;
+        text-shadow: 0.1em 0.1em 0.3em #000000;
+        font-size: 0.8em;
+    }
+
+    .name {
+        height: 3.5em;
+        width: 7em;
+    }
+}

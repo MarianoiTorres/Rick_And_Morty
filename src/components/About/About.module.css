@@ -1,0 +1,32 @@
+.contenedor {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.posicion {
+    margin: 0;
+    padding: 0;
+    width: 50em;
+    height: 17em;
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 1px solid rgba(255,255,255,0.1);
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,1);
+    border-radius: 20px;
+
+}
+
+
+
