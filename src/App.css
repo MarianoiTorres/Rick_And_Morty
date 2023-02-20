@@ -9,10 +9,11 @@
       rgba(0,0,0,0.5),
       rgba(0,0,0,0.5)
   ) 
-  , url(./img/bg1.jpg);
+  , url(https://giffiles.alphacoders.com/118/118767.gif);
    background-repeat:no-repeat;
    background-attachment: fixed;
    background-size:cover;
+   
 }
 
 @font-face {
@@ -20,8 +21,19 @@
    src: url("../rickandmorty.ttf");
 }
 
-@media (max-width: 576px){
+@media (max-width: 640px){
    .App{
       padding-top: 0.1px;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-size:cover;
+     margin: 0;
+     padding-bottom: 0.1px;
+     background-image:  linear-gradient(
+      100deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  ) 
+  , url(./img/bgResponsive.gif);
    }
 }

@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actions"
+import { ADD_FAVORITE, ALL_CHARACTERS, DELETE_FAVORITE, FILTER, ORDER } from "./actions"
 
 const initialState = {
     myFavorites: [],
@@ -10,8 +10,8 @@ const reducer = (state=initialState, action) => {
         case ADD_FAVORITE: 
         return {
             ...state,
-            myFavorites: [...state.allCharacters, action.payload],
-            allCharacters: [...state.allCharacters, action.payload]
+            myFavorites: [...state.myFavorites, action.payload],
+            allCharacters: [...state.myFavorites, action.payload]
         }
         case DELETE_FAVORITE:
         return {
@@ -36,7 +36,11 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 myFavorites: [...state.myFavorites.sort((a , b) => b.id - a.id)]
               }}
-
+        case ALL_CHARACTERS:
+            return {
+                ...state,
+                myFavorites: state.allCharacters
+            }
         default: return {...state}
     }
 }

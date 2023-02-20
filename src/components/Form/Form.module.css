@@ -63,7 +63,7 @@ form {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.11);
+        transform: scale(1.09);
     }
     100% {
         transform: scale(1);
@@ -84,13 +84,15 @@ form {
     width: 25em;
     height: 4em;
     font-family: "Courier New",monospace;
+    letter-spacing: 5px;
     border: none;
     outline: none;
-    border-bottom: 2px solid rgb(55, 150, 75);
+    border-bottom: 2px solid rgb(59, 185, 116);
     margin-bottom: 1.5em;
     color-scheme: dark light;
-    -webkit-text-fill-color: rgb(58, 247, 0);
-}
+    -webkit-text-fill-color: rgb(59, 185, 116);
+}:focus{outline: none;}
+
 
 input:hover {
     border-bottom: 2px solid rgb(58, 247, 0);
@@ -98,8 +100,9 @@ input:hover {
 }
 
 ::placeholder {
-    color: rgb(58, 247, 0);
-    
+    color: rgb(59, 185, 116);
+    font-family: "rickandmorty","Courier New",monospace;
+    letter-spacing: 5px;
 }
 
 .buttonLogin {
@@ -109,14 +112,14 @@ input:hover {
     border-radius: 10px;
     border: none;
     color: white;
-    background-color: rgb(55, 150, 75);
+    background-color: rgb(59, 185, 116);
     width: 84%;
     font-family: "rickandmorty", "Courier New",monospace;
 }
 
 .buttonLogin:hover {
-    border: 2px solid rgb(58, 247, 0);
-    color: rgb(58, 247, 0);
+    border: 2px solid rgb(59, 185, 116);
+    color: rgb(59, 185, 116);
     background-color: #17181c;
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
@@ -125,29 +128,51 @@ input:hover {
     transition: 0.2s ease-in;
 }
 
-@media (max-width: 576px){
+@media (max-width: 640px){
 
-    .center {
-        width: 300px;
-        height: 400px;
-    }
-
-    .inputLogin {
-        width: 17em;
-        height: 2em;
-
-    }
-
-    .labelAndInputs {
-        margin-top: 3.5em;
-        padding-bottom: 2em;
-        padding-top: 0.2em;
+    .container {
+        max-width: 100vw;
+        min-height:80vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
     }
     
 
+    .center {
+        margin-top: 35%;
+        width: 400px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    .inputLogin {
+        width: 80%;
+        height: 4em;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    .labelAndInputs {
+        margin-top: 1.5em;
+        padding-bottom: 1em;
+        padding-top: 0.3em;
+        width: 100%;
+    }
+    
+    .form {
+        width: 100%;
+        
+    }
+
     .logo {
         padding-top: 20px;
-        width: 15em;
+        width: 18em;
         animation: animation infinite ease-in-out 1600ms;
     }
 }

@@ -32,29 +32,41 @@
     width: 6.5em;
     height: 2.3em;
     font-weight:bolder;
-    background-color: rgb(14, 197, 136);
-    font-family: "Courier New",monospace;
+    background-color: rgb(59, 185, 116);
+    font-family: "rickandmorty","Courier New",monospace;
+    letter-spacing: 2px;
     border-radius: 10px;
     border-color: rgb(64, 138, 113);
 }
 
 .button:hover{
-    border: 2px solid rgb(14, 197, 136);
-    color: rgb(14, 197, 136);
+    border: 2px solid rgb(59, 185, 116);
+    color: rgb(59, 185, 116);
     background-color: #17181c;
     cursor: pointer;
     transition: 0.2s ease-in;
 }
 
 .input::placeholder{
+    font-family: "rickandmorty";
     text-align: center;
     color: white;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
 
     .button {
-        width: 4.5em;
-        height: 2.3em;
+        margin-top: 5px;
+        width: 145px;
+        height: 40px;
+        padding: 0;
+        margin: 1;
+        letter-spacing: 4px;
+    }
+
+    .input {
+        margin-left: 4px;
+        width: 145px;
+        height: 40px;
     }
 }

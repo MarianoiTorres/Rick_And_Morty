@@ -28,9 +28,9 @@
 .posicion:hover {
     transform: scale(1.01);
    
-    -webkit-box-shadow: 0px 0px 21px 0px rgb(14, 197, 136);
-    -moz-box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
-    box-shadow: 0px 0px 21px 0px rgba(14, 197, 136);
+    -webkit-box-shadow: 0px 0px 21px 0px rgb(59, 185, 116);
+    -moz-box-shadow: 0px 0px 21px 0px rgb(59, 185, 116);
+    box-shadow: 0px 0px 21px 0px rgb(59, 185, 116);
      transition: 0.1s ease-in;
 }
 
@@ -47,7 +47,7 @@ h2 {
 }
 
 b {
-    color: rgb(74, 185, 40);;
+    color: rgb(59, 185, 116);
 }
 
 .info{
@@ -56,7 +56,11 @@ b {
     text-align: left;
 }
 
-@media (max-width: 576px){
+@media (max-width: 640px){
+    .contenedor{
+        margin: 30px;
+    }
+
     .posicion {
         padding: 30px;
         flex-direction:column;

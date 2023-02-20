@@ -7,6 +7,8 @@ import Form from './components/Form/Form.jsx'
 import Favorites from './components/Favorites/Favorites'
 import { useState, useEffect } from 'react'
 import {Routes, Route, useLocation, useNavigate} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteFavorite } from './redux/actions'
 
 
 //---------------------------------------------------------------------
@@ -58,11 +60,14 @@ function App () {
       );
   }
 
+  const dispatch = useDispatch()
+  const myFavorites = useSelector(state => state.myFavorites)
+
   const onClose = (id) => {
     setCharacters(
       characters.filter(character => character.id !== id)
-  )
-
+    )
+    dispatch(deleteFavorite(id))  
   }
 
   return ( 

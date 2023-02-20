@@ -6,8 +6,8 @@ import image from '../../img/AA.png'
 export default function Form ({login}){
 
     const [userData, setUserData] = useState({
-        username: '',
-        password: ''
+        username: 'user@gmail.com',
+        password: 'password1'
     })
 
     const [errors, setErrors] = useState({
@@ -35,7 +35,7 @@ export default function Form ({login}){
     return (
         <div className={style.container}>
             <div className={style.center}>       
-                <form  onSubmit={handleSubmit}>
+                <form  onSubmit={handleSubmit} className={style.form}>
                     <img className={style.logo} src={image} alt="" />
                         <div className={style.labelAndInputs}>
                             <input placeholder="Username" autoComplete="off" className={errors.username ? style.box : style.inputLogin} type="text" name='username' onChange={handleInputChange} value={userData.username}/>

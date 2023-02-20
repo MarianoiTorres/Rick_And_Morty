@@ -6,13 +6,13 @@
 
 .posicion {
     margin: 0;
-    padding: 0;
+    padding: 60px;
     width: 50em;
     height: 17em;
-    padding: 5em;
     display: flex;
     justify-content: center;
-    gap: 2em;
+    flex-direction: column-reverse;
+    gap: 1em;
     background: linear-gradient(
         135deg,
         rgba(255,255,255,0.1),
@@ -28,5 +28,110 @@
 
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.b {
+    color: rgb(59, 185, 116);
+}
+
+.name {
+    letter-spacing: 2px;
+    color: rgb(253, 244, 244);
+    display: block;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 55px;
+    margin: 0;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 25ch;
+    text-shadow: 5px 5px 5px #000000;
+
+    animation: typing 3s steps(25), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+.about {
+    letter-spacing: 2px;
+    font-family: "Courier New",monospace;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.henry {
+    color: rgb(255, 230, 0);
+}
+
+
+
+.containerRedes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.boton {
+    border: 1px solid rgb(59, 185, 116);
+    border-radius: 50%;
+    background: none;
+    background-color: rgb(59, 185, 116);
+}
+
+.boton:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    color: rgb(14, 197, 136);
+    background-color: #17181c;
+    transform: scale(1.08);
+    transition: 0.2s ease-in;
+    
+}
+
+.img {
+    padding-top: 5px;
+    width: 35px;
+
+}
+
+@media (max-width: 640px) { 
+
+    .contenedor{
+        margin-top: 20px;
+         padding: 0;
+         width: 99%;
+    }
+
+    .posicion {
+        padding: 30px;
+        height: 450px;
+        width: 85%;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+
+}
 
 

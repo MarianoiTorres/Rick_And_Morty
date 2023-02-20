@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import style from '../Cards/Cards.module.css'
 import Card from "../Cards/Card"
-import { orderCards, filterCards } from "../../redux/actions"
+import { orderCards, filterCards, allCharacters } from "../../redux/actions"
 const Favorites = (props) => {
 
     const myFavorites = useSelector((state) => state.myFavorites)
@@ -16,20 +16,31 @@ const Favorites = (props) => {
         dispatch(filterCards(event.target.value))
     }
 
+    const allCharacter = () => {
+        dispatch(allCharacters())
+    }
+
     return(
-        <div className={style.contenedor}>
-            <div>
-                <select onChange={order}>
-                    <option value="Ascendente">Ascendente</option>
-                    <option value="Descendente">Descendente</option>               
+        <div className={style.contenedorFavorites}>
+            
+            <div className={style.order}>
+                <select className={style.select} onChange={order} defaultValue='Order'>
+                    <option selected disabled>Order</option>
+                    <option className={style.options} value="Ascendente">Ascendant</option>
+                    <option className={style.options} value="Descendente">Descendant</option>               
                 </select>
-                <select onChange={filter}>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Genderless">Genderless</option>
-                    <option value="unknown">Unknown</option>
+                <select className={style.select} onChange={filter} defaultValue='Gender'>
+                <option selected disabled>Gender</option>
+                    <option className={style.options} value="Male">Male</option>
+                    <option className={style.options} value="Female">Female</option>
+                    <option className={style.options} value="Genderless">Genderless</option>
+                    <option className={style.options} value="unknown">Unknown</option>
                 </select>
+                <button className={style.select} onClick={allCharacter}>All</button>
+
+
             </div>
+            <div className={style.cardsFavorites}>
             {
                 myFavorites.map((element) => {
                     return (                       
@@ -44,7 +55,9 @@ const Favorites = (props) => {
                     </div>
                     )
                 })
-            }
+            }                
+            </div>
+
         </div>
     )
 }
