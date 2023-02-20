@@ -39,7 +39,7 @@ const reducer = (state=initialState, action) => {
         case ALL_CHARACTERS:
             return {
                 ...state,
-                myFavorites: state.allCharacters
+                myFavorites: state.allCharacters.length !== 0 && state.allCharacters
             }
         default: return {...state}
     }
