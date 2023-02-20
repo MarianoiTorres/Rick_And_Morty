@@ -117,7 +117,7 @@
     }
 
     .posicion {
-        padding: 30px;
+        padding: 10px;
         height: 450px;
         width: 85%;
     }
@@ -129,6 +129,9 @@
 
     .name {
         font-size: 30px;
+        white-space:break-spaces;
+        animation: none;
+        border-right: 0;
     }
 
 
