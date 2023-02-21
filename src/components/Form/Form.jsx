@@ -6,8 +6,8 @@ import image from '../../img/AA.png'
 export default function Form ({login}){
 
     const [userData, setUserData] = useState({
-        username: '',
-        password: ''
+        username: 'user@gmail.com',
+        password: 'password1'
     })
 
     const [errors, setErrors] = useState({
