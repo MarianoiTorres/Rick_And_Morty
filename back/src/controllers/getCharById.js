@@ -7,6 +7,7 @@ const  getCharById = async (req, res) => {
         let response = await axios.get(URL + id)
         let data = response.data
         
+        
             if(!response.data) throw Error('Hubo un error')
             let char = {
                 id: data.id,
